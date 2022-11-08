@@ -8,6 +8,7 @@ function Registration() {
     const initialValues = {
         username: "",
         password: "",
+        role: "",
     };
 
     const validationSchema = Yup.object().shape({
@@ -21,9 +22,17 @@ function Registration() {
         });
     };
 
+    const validateData = (data) => {
+        if('admin'){
+            
+        }else {
+
+        }
+        } 
+
   return (
     <div>
-        <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+        <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema} validateData={validateData}>
             <Form className="formContainer">
                 <label>Username: </label>
                 <ErrorMessage name="username" component="span"/>
@@ -41,6 +50,14 @@ function Registration() {
                     id="inputCreatePost"
                     name="password"
                     placeholder="Your Password..."
+                />
+                <label>Role: </label>
+                <ErrorMessage name="username" component="span"/>
+                <Field
+                    autoComplete="off"
+                    id="inputCreatePost"
+                    name="role"
+                    placeholder="(Admin or User)"
                 />
                 <button type='submit'>Sign Up</button>
             </Form>

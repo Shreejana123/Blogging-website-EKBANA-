@@ -16,6 +16,10 @@ router.post("/", async (req, res) => {
   });
 });
 
+router.post("/admin", async (req, res) => {
+  
+})
+
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 

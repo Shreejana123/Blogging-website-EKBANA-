@@ -7,6 +7,7 @@ import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
 import ChangePassword from "./pages/ChangePassword";
 
 import { AuthContext } from "./helpers/AuthContext";
@@ -74,6 +75,7 @@ function App() {
             <Route path="/registration" element={<Registration />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/profile/:id" element={<Profile />}></Route>
+            <Route path="/admin" element={<Admin />}></Route>
             <Route path="/changepassword" element={<ChangePassword />}></Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>
